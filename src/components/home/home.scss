@@ -1,0 +1,177 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.home {
+
+    nav {
+        width: 100%;
+        height: 70px;
+        color: #3d3d3d;
+
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 100%;
+            padding: 0 25px;
+            max-width: 1155px;
+            margin: auto;
+
+            .logo-section {
+                h3 {
+                    font-family: "Noto Sans";
+                    font-size: 24px;
+                    font-weight: bold;
+                    line-height: 34px;
+                    font-style: normal;
+                    text-align: left;
+                    color: #3d3d3d;
+                }
+            }
+
+            .menu-section {
+                .menu-toggler {
+                    display: none;
+                }
+
+                .menu {
+                    list-style: none;
+                    display: flex;
+
+                    li {
+                        margin-right: 35px;
+                        padding: 0 5px;
+                        cursor: pointer;
+                        font-family: "Noto Sans";
+                        font-size: 16px;
+                        font-weight: normal;
+                        font-style: normal;
+                        text-align: left;
+                        color: #3d3d3d;
+                    }
+
+                    .active {
+                        border-bottom: 1px solid #3d3d3d;
+                    }
+                }
+            }
+        }
+    }
+
+    .main {
+        .box {
+            max-width: 528px;
+            max-height: 130px;
+            border-color: #3e3e3e;
+            border-width: 2px;
+            border-style: solid;
+            background: #ffffff;
+            padding: 17px 18px;
+
+            .flag {
+                max-width: 127px;
+                display: flex;
+                align-items: center;
+
+                img {
+                    width: 100%;
+                }
+            }
+
+            .countryName {
+                font-family: "Noto Sans";
+                font-size: 24px;
+                font-weight: normal;
+                font-style: normal;
+                text-align: left;
+                color: #3d3d3d;
+            }
+
+            .countryRegion {
+                font-family: "Noto Sans";
+                font-size: 16px;
+                font-weight: normal;
+                line-height: 19px;
+                font-style: normal;
+                text-align: left;
+                color: #6f6f6f;
+            }
+        }
+    }
+}
+
+@media (max-width: 767px) {
+    .home {
+        nav {
+            .nav-container {
+                .menu-section {
+                    .menu-toggler {
+                        display: block;
+                        cursor: pointer;
+                    }
+
+                    .menu {
+                        position: absolute;
+                        left: 0;
+                        right: 0;
+                        top: 70px;
+                        background-color: #3d3d3d;
+                        transform: translateX(-100%);
+                        transition: transform ease-in-out 0.8s;
+                        transition-delay: 0.1s;
+                        display: block;
+
+                        li {
+                            padding: 20px 25px;
+                            display: block;
+                            color: #ffffff;
+                        }
+                    }
+
+                    .menu.is-active {
+                        transform: translateX(0%);
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+@media (max-width: 450px) {
+    .home {
+        nav {
+            .nav-container {
+                .logo-section {
+                    h3 {
+                        font-size: 20px;
+                    }
+                }
+                .menu-section {
+
+                    .menu {
+                        li {
+                            font-size: 13px;
+                        }
+                    }
+
+                }
+            }
+        }
+        .main {
+            .box {
+    
+                .countryName {
+                    font-size: 16px;
+                }
+    
+                .countryRegion {
+                    font-size: 13px;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,145 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+}
+
+.login {
+    height: 100vh;
+    background-color: #EBEBEB;
+
+
+    .login-section {
+        width: fit-content;
+
+        .title {
+            font-family: "Noto Sans";
+            font-size: 32px;
+            font-weight: bold;
+            line-height: 42px;
+            font-style: normal;
+            text-align: left;
+            color: #3d3d3d;
+        }
+
+        h6 {
+            font-family: "Noto Sans";
+            font-size: 16px;
+            font-weight: bold;
+            line-height: 26px;
+            font-style: normal;
+            text-align: left;
+            color: #3d3d3d;
+            margin-bottom: 30px;
+
+            a {
+                font-family: "Noto Sans";
+                font-size: 16px;
+                font-weight: normal;
+                font-style: normal;
+                text-align: left;
+                color: #587fff;
+            }
+        }
+
+        form {
+            .form-input {
+                border-color: #3e3e3e;
+                border-width: 2px;
+                border-style: solid;
+                background: #ffffff;
+                width: 280px;
+                height: 48px;
+                padding: 10px;
+            }
+
+            .keepSignedIn {
+                border-color: #000000;
+                border-width: 2px;
+                border-style: solid;
+                background: #f2f2f2;
+                width: 32px;
+                height: 32px;
+            }
+
+            .signedIn {
+                font-family: "Noto Sans";
+                font-size: 16px;
+                font-weight: normal;
+                font-style: normal;
+                text-align: left;
+                color: #3d3d3d;
+                display: flex;
+                align-items: center;
+            }
+
+            .btn-signIn {
+                background: #3c3c3c;
+                width: 280px;
+                height: 48px;
+                font-family: "Noto Sans";
+                font-size: 16px;
+                font-weight: normal;
+                font-style: normal;
+                text-align: center;
+                color: #fcfcfc;
+                border: none;
+                outline: none;
+            }
+
+            .title-small {
+                margin: 20px 0;
+                font-family: "Noto Sans";
+                font-size: 13px;
+                font-weight: bold;
+                line-height: 19px;
+                font-style: normal;
+                text-align: center;
+                color: #3d3d3d;
+                width: 100%;
+                position: relative;
+                &::before {
+                    content: "";
+                    display: block;
+                    width: 70px;
+                    height: 2px;
+                    background: #929292;
+                    left: 0;
+                    top: 50%;
+                    position: absolute;
+                }
+                &::after {
+                    content: "";
+                    display: block;
+                    width: 70px;
+                    height: 2px;
+                    background: #929292;
+                    right: 0;
+                    top: 50%;
+                    position: absolute;
+                }
+            }
+            .icons {
+                i {
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 450px) {
+    .login {
+        .login-section {
+    
+            .title {
+                font-size: 24px;
+                line-height: 32px;
+            }
+            }
+        }
+    }
